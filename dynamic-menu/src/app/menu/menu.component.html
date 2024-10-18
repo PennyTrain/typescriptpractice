@@ -1,0 +1,13 @@
+<div>
+  <label for="typeSelect">Select Type:</label>
+  <select id="typeSelect" [(ngModel)]="selectedType" (change)="onTypeChange($event)">
+    <option *ngFor="let type of types" [value]="type">{{ type }}</option>
+  </select>
+</div>
+
+<div>
+  <label for="menuItems">Menu Items:</label>
+  <ul id="menuItems">
+    <li *ngFor="let item of menuItems" [hidden]="!item.visible">{{ item.name }}</li>
+  </ul>
+</div>
