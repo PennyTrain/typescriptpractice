@@ -25,13 +25,14 @@ export class MenuComponent {
   }
 
   updateMenuItems() {
-    const selectedTypeId = parseInt(this.selectedType.split(' '), 10);
+    const selectedTypeId = parseInt(this.selectedType.split(' ')[1], 10);
     console.log('Updating menu items for type:', this.selectedType);
     this.menuItems.forEach(item => {
-      item.visible = item.types.includes(selectedTypeId);
+      item.visible = item.types.includes(selectedTypeId) || item.types.includes(0);
       console.log(`Item: ${item.name}, Visible: ${item.visible}`);
     });
   }
+  
 
   onTypeChange(event: Event) {
     this.selectedType = (event.target as HTMLSelectElement).value;
