@@ -12,8 +12,8 @@ import { menuItems } from '../menu-items';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent {
-  types = types.map(type => `Type ${type.id}`);
-  selectedType = 'Type 1';
+  types = types.map(type => type.name); // Use the actual type names
+  selectedType = types[0].name; // Default to the first type name
 
   menuItems = menuItems.map(item => ({
     ...item,
@@ -25,14 +25,13 @@ export class MenuComponent {
   }
 
   updateMenuItems() {
-    const selectedTypeId = parseInt(this.selectedType.split(' ')[1], 10);
+    const selectedTypeId = types.find(type => type.name === this.selectedType)?.id ?? 1;
     console.log('Updating menu items for type:', this.selectedType);
     this.menuItems.forEach(item => {
       item.visible = item.types.includes(selectedTypeId) || item.types.includes(0);
       console.log(`Item: ${item.name}, Visible: ${item.visible}`);
     });
   }
-  
 
   onTypeChange(event: Event) {
     this.selectedType = (event.target as HTMLSelectElement).value;
