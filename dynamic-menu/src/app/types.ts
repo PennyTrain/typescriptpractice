@@ -1,7 +1,17 @@
 export const types = [
-  { id: 1, name: 'Hardware' },
-  { id: 2, name: 'Conditioning' },
-  { id: 3, name: 'Main' },
-  { id: 4, name: 'CJC' },
-  { id: 5, name: 'UserCalibration' }
+  { id: 1, name: 'Off' },
+  { id: 2, name: 'Thermocouple' },
+  { id: 3, name: 'Millivolt' },
+  { id: 4, name: 'Volt' },
+  { id: 5, name: 'Milliampere' },
+  { id: 6, name: 'Zirconia' },
+  { id: 7, name: 'RTD 2 Wires' },
+  { id: 8, name: 'RTD 3 Wires' },
+  { id: 9, name: 'RTD 4 Wires' },
+  { id: 10, name: 'Resistance 2 Wires' },
+  { id: 11, name: 'Resistance 3 Wires' },
+  { id: 12, name: 'Resistance 4 Wires' },
+  { id: 13, name: 'Potentiometer' },
+  { id: 14, name: 'Contact Closure' },
+  { id: 15, name: 'Pyrometer' },
 ];
