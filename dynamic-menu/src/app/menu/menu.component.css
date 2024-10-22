@@ -39,3 +39,7 @@ div {
 .hidden {
   display: none;
 }
+
+.form {
+  font-size: 10px;
+}

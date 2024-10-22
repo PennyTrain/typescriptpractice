@@ -1,0 +1,35 @@
+<!-- availability-check.component.html -->
+<div>
+    <button *ngFor="let channel of channels" (click)="displayMenuItems(channel)">
+      {{ channel }}
+    </button>
+  </div>
+  
+  <div class="form" *ngFor="let item of menuItems" [ngClass]="{ 'hidden': !item.visible }">
+    <label [for]="item.name">{{ item.description }}</label>
+    <ng-container [ngSwitch]="item.inputType">
+      <input 
+        *ngSwitchCase="'text'" 
+        type="text" 
+        [id]="item.name" 
+        [name]="item.name" 
+        [(ngModel)]="item.value" 
+      />
+      <input 
+        *ngSwitchCase="'number'" 
+        type="number" 
+        [id]="item.name" 
+        [name]="item.name" 
+        [(ngModel)]="item.value" 
+      />
+      <select 
+        *ngSwitchCase="'select'" 
+        [id]="item.name" 
+        [name]="item.name" 
+        [(ngModel)]="item.value"
+      >
+        <option *ngFor="let option of item.options" [value]="option">{{ option }}</option>
+      </select>
+    </ng-container>
+  </div>
+  
