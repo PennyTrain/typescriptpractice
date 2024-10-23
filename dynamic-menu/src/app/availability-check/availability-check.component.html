@@ -6,7 +6,7 @@
   </div>
   
   <div class="form" *ngFor="let item of menuItems" [ngClass]="{ 'hidden': !item.visible }">
-    <label [for]="item.name">{{ item.description }}</label>
+    <label [for]="item.name">{{ item.name }}</label>
     <ng-container [ngSwitch]="item.inputType">
       <input 
         *ngSwitchCase="'text'" 
@@ -30,6 +30,13 @@
       >
         <option *ngFor="let option of item.options" [value]="option">{{ option }}</option>
       </select>
+      <input 
+      *ngSwitchCase="'switch'" 
+      type="checkbox" 
+      [id]="item.name" 
+      [name]="item.name" 
+      [(ngModel)]="item.value" 
+    />
     </ng-container>
   </div>
   
