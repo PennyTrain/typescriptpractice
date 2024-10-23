@@ -1,0 +1,51 @@
+<div>
+  <label for="triggerType">Select Trigger Type:</label>
+  <select id="triggerType" [(ngModel)]="parameters.TriggerType" (change)="updateAvailability()">
+    <option value="0">AbsHigh</option>
+    <option value="1">AbsLow</option>
+    <option value="2">DevBandIn</option>
+    <option value="3">DevBandOut</option>
+    <option value="4">DevHigh</option>
+    <option value="5">DevLow</option>
+    <option value="6">RisingRate</option>
+    <option value="7">FallingRate</option>
+  </select>
+</div>
+
+<div>
+  <label for="shelvingAllowed">Shelving Allowed:</label>
+  <input type="checkbox" id="shelvingAllowed" [(ngModel)]="parameters.ShelvingAllowed" (change)="updateAvailability()">
+</div>
+
+<div>
+  <label for="threshold">Threshold:</label>
+  <span id="threshold">{{ availability['Threshold'] }}</span>
+</div>
+<div>
+  <label for="reference">Reference:</label>
+  <span id="reference">{{ availability['Reference'] }}</span>
+</div>
+<div>
+  <label for="deviation">Deviation:</label>
+  <span id="deviation">{{ availability['Deviation'] }}</span>
+</div>
+<div>
+  <label for="rate">Rate:</label>
+  <span id="rate">{{ availability['Rate'] }}</span>
+</div>
+<div>
+  <label for="filterTimeConstant">Filter Time Constant:</label>
+  <span id="filterTimeConstant">{{ availability['FilterTimeConstant'] }}</span>
+</div>
+<div>
+  <label for="shelve">Shelve:</label>
+  <span id="shelve">{{ availability['Shelve'] }}</span>
+</div>
+<div>
+  <label for="shelveTime">Shelve Time:</label>
+  <span id="shelveTime">{{ availability['ShelveTime'] }}</span>
+</div>
+<div>
+  <label for="maxShelveTime">Max Shelve Time:</label>
+  <span id="maxShelveTime">{{ availability['MaxShelveTime'] }}</span>
+</div>

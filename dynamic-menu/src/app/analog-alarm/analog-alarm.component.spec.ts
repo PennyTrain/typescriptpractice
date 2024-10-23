@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { IntegratingComponent } from './integrating.component';
+import { AnalogAlarmComponent } from './analog-alarm.component';
 
-describe('IntegratingComponent', () => {
-  let component: IntegratingComponent;
-  let fixture: ComponentFixture<IntegratingComponent>;
+describe('AnalogAlarmComponent', () => {
+  let component: AnalogAlarmComponent;
+  let fixture: ComponentFixture<AnalogAlarmComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [IntegratingComponent]
+      imports: [AnalogAlarmComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(IntegratingComponent);
+    fixture = TestBed.createComponent(AnalogAlarmComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
