@@ -3,6 +3,8 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { LinearizationAvailability } from './availability-rules';
 
+type InputType = 'mV' | 'V' | 'mA' | 'Zirconia' | 'TC' | 'RTD';
+
 @Component({
   selector: 'app-linearization',
   standalone: true,
@@ -12,7 +14,7 @@ import { LinearizationAvailability } from './availability-rules';
 })
 export class LinearizationComponent implements OnInit {
   linearisationTypes: string[] = [];
-  selectedInputType: 'mV' | 'V' | 'mA' | 'Zirconia' | 'TC' | 'RTD' = 'mV'; // Default value
+  selectedInputType: InputType = 'mV'; // Default value
 
   constructor() { }
 
@@ -21,6 +23,7 @@ export class LinearizationComponent implements OnInit {
   }
 
   updateLinearisationTypes(): void {
+    console.log('Selected Input Type:', this.selectedInputType); // Debugging line
     const availability = LinearizationAvailability(this.selectedInputType);
     this.linearisationTypes = Object.keys(availability).filter(key => availability[key]);
   }

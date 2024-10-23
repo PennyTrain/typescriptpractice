@@ -1,19 +1,18 @@
 <div>
-    <label for="inputType">Select Input Type:</label>
-    <select id="inputType" [(ngModel)]="selectedInputType" (change)="updateLinearisationTypes()">
-      <option value="mV">mV</option>
-      <option value="V">V</option>
-      <option value="mA">mA</option>
-      <option value="Zirconia">Zirconia</option>
-      <option value="T/C">T/C</option>
-      <option value="RTD">RTD</option>
-    </select>
-  </div>
-  
-  <div>
-    <label for="linearisationType">Select Linearisation Type:</label>
-    <select id="linearisationType">
-      <option *ngFor="let type of linearisationTypes" [value]="type">{{ type }}</option>
-    </select>
-  </div>
-  
+  <label for="inputType">Select Input Type:</label>
+  <select id="inputType" [(ngModel)]="selectedInputType" (change)="updateLinearisationTypes()">
+    <option value="mV">mV</option>
+    <option value="V">V</option>
+    <option value="mA">mA</option>
+    <option value="Zirconia">Zirconia</option>
+    <option value="TC">T/C</option> <!-- Ensure value matches 'TC' -->
+    <option value="RTD">RTD</option>
+  </select>
+</div>
+
+<div>
+  <label for="linearisationType">Select Linearisation Type:</label>
+  <select id="linearisationType">
+    <option *ngFor="let type of linearisationTypes" [value]="type">{{ type }}</option>
+  </select>
+</div>
