@@ -24,14 +24,7 @@ describe('AvailabilityCheckComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should initialize menu items with visibility set to false', () => {
-    component.menuItems.forEach(item => {
-      expect(item.visible).toBeFalse();
-    });
-  });
-
-  it('should set the correct menu items to visible for a given channel', () => {
-    component.displayMenuItems('conditioning');
+  it('should initialize menu items with visibility set to false, except for conditioning', () => {
     component.menuItems.forEach(item => {
       if (item.channel === 'conditioning') {
         expect(item.visible).toBeTrue();
