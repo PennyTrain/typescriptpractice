@@ -6,7 +6,7 @@ export function UnitsAvailability(): { [key: string]: boolean } {
       V: true,
       mV: true,
       A: true,
-      mA: true,
+      mA: false, //true
       PH: true,
       mmHg: true,
       psi: true,

@@ -4,7 +4,7 @@ import { AvailabilityCheckComponent } from './availability-check/availability-ch
 import { LinearizationComponent } from './linearization/linearization.component';
 import { AnalogAlarmComponent } from './analog-alarm/analog-alarm.component';
 import { AbsvalComponent } from './absval/absval.component';
-import { UnitsAvailability } from './units/units-availability';
+import { UnitsComponent } from './units/units.component';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +14,7 @@ import { UnitsAvailability } from './units/units-availability';
     LinearizationComponent,
     AnalogAlarmComponent,
     AbsvalComponent,
-    UnitsAvailability
+    UnitsComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
