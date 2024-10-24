@@ -1,0 +1,14 @@
+<div>
+    <label for="ruleID">Select Rule ID:</label>
+    <input type="number" id="ruleID" [(ngModel)]="ruleID" (change)="updateExpressions()">
+  </div>
+  
+  <div>
+    <label for="availability">Availability:</label>
+    <span id="availability">{{ availability['available'] }}</span>
+  </div>
+  <div>
+    <label for="alterability">Alterability:</label>
+    <span id="alterability">{{ alterability['alterable'] }}</span>
+  </div>
+  

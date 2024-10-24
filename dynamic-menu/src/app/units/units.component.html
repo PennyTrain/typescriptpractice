@@ -1,0 +1,12 @@
+<div>
+    <label for="unit">Select Unit:</label>
+    <select id="unit" [(ngModel)]="selectedUnit" (change)="updateAvailability()">
+      <option *ngFor="let unit of units" [value]="unit">{{ unit }}</option>
+    </select>
+  </div>
+  
+  <div>
+    <label for="availability">Availability:</label>
+    <span id="availability">{{ availability[selectedUnit] }}</span>
+  </div>
+  
